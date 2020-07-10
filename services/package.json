@@ -1,0 +1,15 @@
+{
+  "name": "services",
+  "version": "1.0.0",
+  "description": "Service layer for iShopper application",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap/cds": "^3",
+    "express": "^4"
+  },
+  "scripts": {
+    "start": "npx cds run"
+  }
+}
