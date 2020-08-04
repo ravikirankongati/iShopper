@@ -1,0 +1,23 @@
+{
+  "name": "src",
+  "version": "1.0.0",
+  "description": "iShopper App - A app to remind everything near and dear to you",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IC-Team534/iShopper.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IC-Team534/iShopper/issues"
+  },
+  "homepage": "https://github.com/IC-Team534/iShopper#readme",
+  "dependencies": {
+    "@sap/hana-client": "^2.5.101",
+    "express": "^4.17.1"
+  }
+}
