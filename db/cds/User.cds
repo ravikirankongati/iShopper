@@ -1,6 +1,5 @@
 namespace user;
 
-
 entity Details {
     key email    : String(100);
         ID       : UUID;
