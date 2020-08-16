@@ -12,7 +12,6 @@ entity shoppingItems {
     ListID: UUID;
     ItemID: UUID;
     IsItemSuggested : Boolean;
-    ItemID          : Integer;
     Status          : String(100);
 }
 

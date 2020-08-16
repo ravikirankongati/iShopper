@@ -1,8 +1,9 @@
-module.exports = (srv) => {
+const cds = require('@sap/cds')
+module.exports = async function (){
 
-    const { Details, RelationshipDetails } = srv.entities
+    const { Details, RelationshipDetails,countOrders } = thism.entities
 
-    srv.on('hello', req => {
+    this.on('countOrders', async req => {
         console.log("hello: " + JSON.stringify(req.data))
         return "Hello " + req.data.to
       })

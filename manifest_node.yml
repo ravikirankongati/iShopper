@@ -1,6 +1,6 @@
 ---
 applications:
 - name: service-app
-  path: srv/src
+  path: gen/srv
   buildpack: nodejs_buildpack
   memory: 4G
