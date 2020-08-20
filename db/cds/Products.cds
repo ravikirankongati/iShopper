@@ -12,13 +12,14 @@ entity products
         purchasedOn: Date;
         productConsumed: Boolean Default false;
         isPurchased: Boolean Default false;
+        willBeConsumedByDate: Date;
 
 }
 
 entity productType {
     key productType     : UUID;
-     productTypeDescription : String;
-
+    productTypeDescription : String;
+    
 }
 
 view itemsPurchased as select from products left join productType on
@@ -38,4 +39,5 @@ view itemsPurchased as select from products left join productType on
 
     view itemsPurchasedOutOfStock as select from itemsPurchased where isPurchased = true and productConsumed = true;
 
-    view itemsPurchasedTobeAddedToShoppingList as select from itemsPurchased where isPurchased = true and productConsumed = true;
+    view itemsPurchasedTobeAddedToShoppingList as select from itemsPurchased where isPurchased = true and productConsumed = true
+    and remindOnDate > CURRENT_DATE and remindOnDate < (TO_DATE (CURRENT_DATE, 'YYYY-MM-DD'), 15);

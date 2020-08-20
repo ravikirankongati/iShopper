@@ -1,4 +1,3 @@
-git 
 module.exports = srv => {
 
     srv.on('READ', 'Details', () => console.log('Details API Called'));

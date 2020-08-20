@@ -18,3 +18,9 @@ entity RelationshipDetails {
         lifeEventDescription : String(100);
         remindBeforeInDays   : Integer;
 }
+
+//view addGiftForReminderinShoppingList as select from RelationshipDetails where 
+  //     lifeEventDate between (CURRENT_DATE ,(TO_DATE (CURRENT_DATE, 'YYYY-MM-DD'), 15));
+
+         view addGiftForReminderinShoppingList as select from RelationshipDetails where lifeEventDate 
+         between CURRENT_DATE  AND (TO_DATE(CURRENT_DATE,15));
