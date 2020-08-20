@@ -3,23 +3,25 @@ namespace shoppingList;
 
 
 entity shoppingList {
-    ListID          : UUID;
-    UserID          : UUID;
+    key ListID          : UUID;
+    key UserID          : UUID;
    
 }
 
 entity shoppingItems {
-    ListID: UUID;
+    key ListID: UUID;
     ItemID: UUID;
     IsItemSuggested : Boolean;
     Status          : String(100);
 }
 
-view masterShoppingLisy as select from shoppingList left join shoppingItems on
+view masterShoppingList as select from shoppingList left join shoppingItems on
 											shoppingList.ListID = shoppingItems.ListID {
-											shoppingList.ListID as ListID,
-											shoppingList.UserID as UserID,
+											key shoppingList.ListID as ListID,
+											key shoppingList.UserID as UserID,
 											shoppingItems.IsItemSuggested as IsItemSuggested,
-											shoppingItems.ItemID as ItemID,
+											key shoppingItems.ItemID as ItemID,
 											shoppingItems.Status as Status
 	};
+
+     
